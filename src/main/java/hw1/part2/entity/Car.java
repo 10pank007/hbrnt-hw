@@ -13,7 +13,7 @@ public class Car {
     private Long id;
     @Column(name = "model")
     private String model;
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private TYPE type;
     @Column(name = "price")
     private Double price;
