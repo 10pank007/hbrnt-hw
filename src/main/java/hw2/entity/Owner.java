@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,7 +24,7 @@ public class Owner {
     private String name;
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
-    private List<Car> cars;
+    private List<Car> cars = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "driver_license_id")
